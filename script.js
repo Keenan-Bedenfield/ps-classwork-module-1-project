@@ -22,44 +22,58 @@ function tsa(player1Choice) {
 
   //PLAYER SELECTION BUTTONS
   const tankBtn = document.getElementById('tankBtn')
-  tankBtn.classList.add('flexCenter')
+  console.log(tankBtn);
+  tankBtn.classList.add('flexCtr')
+  tankBtn.innerHTML
   tankBtn.addEventListener("click",() => {
 
   })
 
   const soldierBtn = document.getElementById('soldierBtn')
-  soldierBtn.classList.add('flexCenter')
+  soldierBtn.classList.add('flexCtr')
   soldierBtn.addEventListener("click",() => {
 
   })
 
   const artilleryBtn = document.getElementById('artilleryBtn')
-  artilleryBtn.classList.add('flexCenter')
+  artilleryBtn.classList.add('flexCtr')
   artilleryBtn.addEventListener("click",() => {
 
   })
 
 //PLAYER2 SELECTION BUTTONS
   const pl2TankBtn = document.getElementById('pl2TankBtn')
-  pl2TankBtn.classList.add('flexCenter')
+  pl2TankBtn.classList.add('flexCtr')
   pl2TankBtn.addEventListener("click",() => {
 
   })
 
   const pl2SoldierBtn = document.getElementById('pl2SoldierBtn')
-  pl2SoldierBtn.classList.add('flexCenter')
+  pl2SoldierBtn.classList.add('flexCtr')
   pl2SoldierBtn.addEventListener("click",() => {
 
   })
 
   const pl2ArtilleryBtn = document.getElementById('pl2ArtilleryBtn')
-  pl2ArtilleryBtn.classList.add('flexCenter')
+  pl2ArtilleryBtn.classList.add('flexCtr')
   pl2ArtilleryBtn.addEventListener("click",() => {
 
   })
 
 //Main menu script
 const gameMenu = document.getElementById('.menuBtn');
+
+
+
+//Inside the game screen
+
+const best = document.getElementById('matchContainer');
+best.classList.add('flexCtr');
+best.style.color = ('red');
+
+
+
+
 
 
 // test the game
