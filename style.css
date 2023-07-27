@@ -6,6 +6,7 @@
 
 }
 
+/* Main menu styling */
 #gameScreen {
     display: flex;
 }
@@ -19,9 +20,9 @@
     z-index: 1;
 }
 
-.flexCenter {
+.flexCtr {
     display: flex;
-    justify-content: flex-center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -39,14 +40,6 @@
     box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 }
 
-.menuBtn {
-
-    background-color: #2196F3;
-    padding: 10px;
-    border: 5px solid black;
-    z-index: 1;
-
-}
 
 .title {
     font-size: 250%;
@@ -79,6 +72,7 @@ ul li a {
 
 ul li a:hover {
     cursor: crosshair;
+    background-color: rgb(84, 128, 31);
 }
 
 ul li a:onclick {
@@ -107,4 +101,21 @@ ul li a:onclick {
     left: 45%;
     z-index: 1;
 }
+
+/* Game Styling */
+
+#gameBody {
+    background-color: rgba(124, 118, 89, 0.863);
+
+}
+
+.choiceBtn {
+    color: antiquewhite;
+    background-color: #537440;
+    padding: 10px;
+    border: 3px solid black;
+    z-index: 1;
+
+}
+
 
