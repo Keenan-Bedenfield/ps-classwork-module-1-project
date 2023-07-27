@@ -7,8 +7,8 @@ commits were made manually through the website
 player 1 choses either Tank, Soldier, or Artillery
 Computer automatically choses an option.
 
-Tank = Rock
-Soldier = Paper
+Tank = Rock,
+Soldier = Paper,
 Artillery = Scissors
 
 # ps-classwork-module-1-project
