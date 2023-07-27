@@ -3,55 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <main>
         <div id="gameContainer">
-            <header id="best"></header>
+            <header >
+                <h1>Best out of:</h1>
+                <h2 id="matchCounter"></h2>
+            </header>
             <div>
-                <span id="player1"></span>
-                <span id="player2"></span>
+                <span id="player1">Player1 score:<span class="score"><span></span>
+                <span id="player2">Player2: score:<span class="score"></span></span>
             </div>
+    
             <div>
-                <span id="playerChoice"></span>
-                <span id="player2Choice"></span>
+                <span id="player1Choice">Player1 Choice</span>
+                <span id="player2Choice">Player2 Choice</span>
             </div>
 
-            <div id="player1Choice">
+            <div id="player1Selection">
                 <div class="tank">
-                    <button class="gameBtn"></button>
+                    <button class="tankBtn"></button>
                 </div>
                 <div class="soldier">
-                    <button class="gameBtn" ></button>
+                    <button class="soldierBtn"></button>
                 </div>
                 <div class="artillery">
-                    <button class="gameBtn" ></button>
+                    <button class="artilleryBtn"></button>
                 </div>
             </div>
 
-            <div id="player2Choice">
+            <span id="centerImage"></span> 
+
+            <!-- <span> section for winner to pop up-->
+                <dialog open></dialog>
+
+            <div id="player2Selection">
                 <div class="tank">
-                    <button class="gameBtn" ></button>
+                    <button id="pl2TankBtn"></button>
                 </div>
                 <div class="soldier">
-                    <button class="gameBtn" ></button>
+                    <button id="pl2SoldierBtn"></button>
                 </div>
                 <div class="artillery">
-                    <button class="gameBtn" ></button>
+                    <button id="pl2ArtilleryBtn"></button>
                 </div>
             </div>
-            
+
+            <div>
+                <span id="restart">Restart</span>
+                <span id="quit">Quit <!--&times;--></span>
+            </div>
+
         </div>
 
     </main>
-    
+
+    <script href="script.js"></script>
 </body>
 </html>
 
+<!-- //winning choice populates onscreen
 
 <ul id="choice">
     <li>Tank</li>
     <li>Soldier</li>
     <li>Artillery</li>
-</ul>
+
+</ul> -->
