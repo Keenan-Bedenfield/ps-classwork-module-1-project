@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body id="gameBody">
     <main>
         <div id="gameContainer">
-            <header >
-                <h1>Best out of:</h1>
+            <header id="matchContainer">
+                <h1 id="matchBest">Best out of:</h1>
                 <h2 id="matchCounter"></h2>
             </header>
             <div>
@@ -25,13 +25,13 @@
 
             <div id="player1Selection">
                 <div class="tank">
-                    <button class="tankBtn"></button>
+                    <button id="tankBtn"></button>
                 </div>
                 <div class="soldier">
-                    <button class="soldierBtn"></button>
+                    <button id="soldierBtn"></button>
                 </div>
                 <div class="artillery">
-                    <button class="artilleryBtn"></button>
+                    <button id="artilleryBtn"></button>
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
 
     </main>
 
-    <script href="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
 
