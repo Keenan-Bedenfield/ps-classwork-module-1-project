@@ -1,76 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body id="gameBody">
-    <main>
-        <div id="gameContainer">
-            <header id="matchContainer">
-                <h1 id="matchBest">Best out of:</h1>
-                <h2 id="matchCounter"></h2>
-            </header>
 
-            <div id="playerScoreContainer">
-                <span id="player1" class="score">Player1 score:</span>
-                <span id="player2" class="score">Player2 score:</span>
-            </div>
-            <br>
-            <div>
-                <span id="player1Choice">Player1 Choice</span>
-                <span id="player2Choice">Player2 Choice</span>
-            </div>
+function startGame() {
+    startBtn.addEventListener("click",()=>{
+      onclick = document.getElementById("startBtn")
+    }); 
+}
 
-            <div id="player1Selection">
-                <div class="gameBtn">
-                    <button id="tankBtn">Tank</button>
-                </div>
-                <div class="gameBtn">
-                    <button id="soldierBtn">Soldier</button>
-                </div>
-                <div class="gameBtn">
-                    <button id="artilleryBtn">Atilley</button>
-                </div>
-            </div>
+function playGame() {
+    let player1Wins = 0;
+    let player2Wins = 0;
+  
+    for (let round = 1; round <= 5; round++) {
+      console.log(`Round ${round}:`);
+      const player1Choice = prompt(`${player1Choice}`).toUpperCase();
+  
+      if (["Tank", "Soldier", "Artillery"].includes(player1Choice)) {
+        console.log(`${player1Choice}`);
+        -1; // decrease the round to and play next/current round
+        continue;
+      }
 
-            <span id="centerImage"></span> 
+      const result = anotherBattle(player1Choice);
+    if (result === 1) {
+      player1Wins++;
+    } else if (result === -1) {
+      player2Wins++;
+    }
+    }
+}
 
-            <!-- <span> section for winner to pop up-->
-                <dialog open></dialog>
+// 3 rounds won
+function endGame () {
+    if (player1Wins === 3 || player2Wins === 3) {
+        console.log("Game Over");
+    }
+}
 
-            <div id="player2Selection">
-                <div class="compGameBtn">
-                    <button id="pl2TankBtn">Tank</button>
-                </div>
-                <div class="compGameBtn">
-                    <button id="pl2SoldierBtn">Soldier</button>
-                </div>
-                <div class="compGameBtn">
-                    <button id="pl2ArtilleryBtn">Artillery</button>
-                </div>
-            </div>
+ 
+function winGame () {
+    if (player1Wins > player2Wins){
+        console.log("Player 1 Wins.");
+      }else if (player1Wins < player2Wins){
+        console.log("Player 2 Wins.");
+      }else{
+        console.log("Stalemate!");
+    }
+}
+  
 
-            <div>
-                <span id="restart">Restart</span>
-                <span id="quit">Quit <!--&times;--></span>
-            </div>
 
-        </div>
+    // ---------Game functionailty----------
 
-    </main>
+function tsa (player1Choice) {
+    let optionArr = ["tank", "soldier", "artillery"];
 
-    <script src="script.js"></script>
-</body>
-</html>
+    const player2Choice = optionArr[Math.floor(Math.random() * optionArr.length)];
+  
+    console.log("Player1 chooses:" + player1Choice);
+    console.log("Player2 chooses:" + player2Choice);
+  
 
-<!-- //winning choice populates onscreen
+    if (player1Choice === player2Choice) {
+      console.log("Stalemate!");
+    } else if (
+      (player1Choice === "tank" && player2Choice === "artillery") ||
+      (player1Choice === "soldier" && player2Choice === "tank") ||
+      (player1Choice === "artillery" && player2Choice === "soldier")
+    ) {
+      console.log("Victory! You won the battle.");
+    } else {
+      console.log("Retreat! You've lost this battle.");
+    }
+  }
+  tsa()
 
-<ul id="choice">
-    <li>Tank</li>
-    <li>Soldier</li>
-    <li>Artillery</li>
+  //PLAYER 1 - BUTTONS to make a choice
+  const tankBtn = document.getElementById('tankBtn')
+//   console.log(tankBtn);
+  tankBtn.classList.add('flexCtr')
+  tankBtn.addEventListener("click",() => {
+    tankBtn.classList.add('.choiceBtn')
+    tankBtn.style.backgroundColor = ("green")
+  })
 
-</ul> -->
+  const soldierBtn = document.getElementById('soldierBtn')
+//   console.log(soldierBtn);
+  soldierBtn.classList.add('flexCtr')
+  soldierBtn.addEventListener("click",() => {
+    soldierBtn.classList.add('.choiceBtn')
+    soldierBtn.style.backgroundColor = ("green")
+  })
+
+  const artilleryBtn = document.getElementById('artilleryBtn')
+//   console.log(artilleryBtn)
+  artilleryBtn.classList.add('flexCtr')
+  artilleryBtn.addEventListener("click",() => {
+    artilleryBtn.classList.add('.choiceBtn')
+    artilleryBtn.style.backgroundColor = ("green")
+  })
+
+//PLAYER2 SELECTION BUTTONS
+  const pl2TankBtn = document.getElementById('pl2TankBtn')
+  pl2TankBtn.classList.add('flexCtr')
+  pl2TankBtn.addEventListener("click",() => {
+    pl2TankBtn.classList.add('.choiceBtn')
+  })
+
+  const pl2SoldierBtn = document.getElementById('pl2SoldierBtn')
+  pl2SoldierBtn.classList.add('flexCtr')
+  pl2SoldierBtn.addEventListener("click",() => {
+    pl2SoldierBtn.classList.add('.choiceBtn')
+  })
+
+  const pl2ArtilleryBtn = document.getElementById('pl2ArtilleryBtn')
+  pl2ArtilleryBtn.classList.add('flexCtr')
+  pl2ArtilleryBtn.addEventListener("click",() => {
+    pl2ArtilleryBtn.classList.add('.choiceBtn')
+  })
+
+//Main menu script
+const gameMenu = document.getElementById('menuBtn');
+
+
+
+//Inside the game screen
+
+const best = document.getElementById('matchContainer');
+best.classList.add('flexCtr');
+best.style.color = ('black');
+
+
+
+
+
+
+
+
+// test the game
+// console.log(tsa("soldier");
