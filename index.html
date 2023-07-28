@@ -5,27 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <main>
-        <header>
-            <h1 class="title">Conquest: Rock, Paper, Scissors</h1>
-        </header>
-        <div class="mainMenu">
-            <div class="gameMenu">
-                <div class="start"></div>
-                <div class="options"></div>
-                <div class="winStreak"></div>
+        <body>
+            <div id="gameScreen">
+                <img id="backgroundPic" src="696881-army-background-pictures-1920x1200-for-mac.jpg" alt="">
+        
+                <div class="menuBox">
+                    <h1 class="title">Conquest: Rock, Paper, Scissors</h1>
+                    <div id="menuBtn">
+                        <ul>
+                            <li class="startBtn"><a href="./" >Play</a></li>
+                            <li class="optionsBtn"> <a href="./"  >Options</a> </li>
+                            <li class="quitBtn"> <a href="./"  > Quit</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+                <p class="copyright">All rights reserved.®</p>
             </div>
-            <ul id="choice">
-                <li>Tank</li>
-                <li>Soldier</li>
-                <li>Artillery</li>
-            </ul>
-        </div>
+        </body>
         
     </main>
 
-    <script href="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
