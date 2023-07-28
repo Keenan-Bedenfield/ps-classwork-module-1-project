@@ -42,7 +42,8 @@
 
 
 .title {
-    font-size: 250%;
+    font-size: 3vw;
+    padding-left: 2vw;
     font-family: 'CallOfOpsDuty', 'Times New Roman', Times, serif;
     display:flex;
     justify-content:center;
@@ -57,6 +58,7 @@ ul li {
 }
 
 ul li a {
+    font-size: 3vw;
     display: flex;
     text-decoration: none;
     justify-content: center;
@@ -85,20 +87,23 @@ ul li a:onclick {
     justify-content:center;
     align-items:center;
     position: fixed;
-    top: 35%;
-    left: 35%;
+    /* font-size: 12%; */
+    top: 20%;
+    left: 20%;
     right: 50%;
     z-index: 1;
     border: 2px solid black;
     background-color: rgba(124, 118, 89, 0.863);
-    width: 30%;
+    width: 50%;
+    padding: 5%;
+    margin-bottom: 1vw;
 }
 
 .copyright {
     position: fixed;
-    font-size: 30px;font-weight: bold;
-    top: 90%;
-    left: 45%;
+    font-size: 2vw;font-weight: bold;
+    top: 92%;
+    left: 42vw;
     z-index: 1;
 }
 
@@ -111,11 +116,152 @@ ul li a:onclick {
 
 .choiceBtn {
     color: antiquewhite;
-    background-color: #537440;
+    background-color: #4b6337;
     padding: 10px;
     border: 3px solid black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     z-index: 1;
 
 }
 
 
+#playerScoreContainer{
+    display:block;
+    justify-content:right;
+    align-items:stretch;
+    
+}
+
+/* player1 score */
+#player1 {
+    position: absolute;
+    left: 18%;
+    padding-bottom: 10%;
+    font-size: 30pt;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+/* player2 score */
+#player2 {
+    position: absolute;
+    right: 15%;
+    padding-bottom: 10%;
+    font-size: 30pt;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#player1Choice {
+   position: absolute;
+   left: 24%;
+   top: 34.3%;
+   font-size: 2vw;
+
+}
+
+
+.gameBtn{
+    display: flex;
+}
+#tankBtn{
+    position: absolute;
+    height:5%;
+    left: 25%;
+    top: 40%;
+    width: 10%;
+    border: 2px solid black;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#soldierBtn{
+    position: absolute;
+    height:5%;
+    left: 25%;
+    top: 45.5%;
+    width: 10%;
+    border: 2px solid black;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 3% 0% 3% 0%;
+}
+
+#artilleryBtn{
+    position: absolute;
+    height:5%;
+    left: 25%;
+    top: 55%;
+    width: 10%;
+    border: 2px solid black;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 3% 0% 3% 0%;
+}
+
+
+
+#player2Choice {
+    position: absolute;
+    top: 34.3%;
+    right: 23.3%;
+   
+}
+
+.compGameBtn{
+
+}
+
+#pl2TankBtn{
+    position: absolute;
+    height:5%;
+    right: 25%;
+    width: 10%;
+    top: 40%;
+    border: 2px solid black;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+}
+
+#pl2SoldierBtn {
+    position: absolute;
+    height:5%;
+    right: 25%;
+    width: 10%;
+    top: 45.5%;
+    border: 2px solid black;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 3% 0% 3% 0%;
+}
+
+#pl2ArtilleryBtn{
+    position: absolute;
+    height:5%;
+    right: 25%;
+    width: 10%;
+    top: 55%;
+    fill: #F9EEEE;
+    border: 2px solid black;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 3% 0% 3% 0%;
+}
+
+#restart{
+    position: absolute;
+    left: 35%;
+    bottom: 15%;
+    font-size: 30pt;
+}
+
+#quit{
+    position: absolute;
+    right: 35%;
+    bottom: 15%;
+    font-size: 30pt;
+}
