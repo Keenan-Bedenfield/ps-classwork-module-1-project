@@ -1,135 +1,160 @@
+/* *{
 
-function startGame() {
-    startBtn.addEventListener("click",()=>{
-        
-    }); 
+} */
+
+:root {
+
 }
 
-function playGame() {
-    let player1Wins = 0;
-    let player2Wins = 0;
-  
-    for (let round = 1; round <= 5; round++) {
-      console.log(`Round ${round}:`);
-      const player1Choice = prompt(`${player1Choice}`).toUpperCase();
-  
-      if (["Tank", "Soldier", "Artillery"].includes(player1Choice)) {
-        console.log(`${player1Choice}`);
-        -1; // decrease the round to and play next/current round
-        continue;
-      }
-
-      const result = anotherBattle(player1Choice);
-    if (result === 1) {
-      player1Wins++;
-    } else if (result === -1) {
-      player2Wins++;
-    }
-    }
+/* Main menu styling */
+#gameScreen {
+    display: flex;
 }
 
-// 3 rounds won
-function endGame () {
-    if (player1Wins === 3 || player2Wins === 3) {
-        console.log("Game Over");
-    }
+#backgroundPic {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    z-index: 1;
 }
 
- 
-function winGame () {
-    if (player1Wins > player2Wins){
-        console.log("Player 1 Wins.");
-      }else if (player1Wins < player2Wins){
-        console.log("Player 2 Wins.");
-      }else{
-        console.log("Stalemate!");
-    }
+.flexCtr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-  
+
+.clicked {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(20, 120, 20, 11);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
 
 
-    // ---------Game functionailty----------
-
-function tsa (player1Choice) {
-    let optionArr = ["tank", "soldier", "artillery"];
-
-    const player2Choice = optionArr[Math.floor(Math.random() * optionArr.length)];
-  
-    console.log("Player1 chooses:" + player1Choice);
-    console.log("Player2 chooses:" + player2Choice);
-  
-
-    if (player1Choice === player2Choice) {
-      console.log("Stalemate!");
-    } else if (
-      (player1Choice === "tank" && player2Choice === "artillery") ||
-      (player1Choice === "soldier" && player2Choice === "tank") ||
-      (player1Choice === "artillery" && player2Choice === "soldier")
-    ) {
-      console.log("Victory! You won the battle.");
-    } else {
-      console.log("Retreat! You've lost this battle.");
-    }
-  }
-  tsa()
-
-  //PLAYER 1 - BUTTONS to make a choice
-  const tankBtn = document.getElementById('tankBtn')
-//   console.log(tankBtn);
-  tankBtn.classList.add('flexCtr')
-  tankBtn.innerHTML
-  tankBtn.addEventListener("click",() => {
-    tankBtn.classList.add('.clicked')
-  })
-
-  const soldierBtn = document.getElementById('soldierBtn')
-//   console.log(soldierBtn);
-  soldierBtn.classList.add('flexCtr')
-  soldierBtn.addEventListener("click",() => {
-    soldierBtn.classList.add('.clicked')
-  })
-
-  const artilleryBtn = document.getElementById('artilleryBtn')
-//   console.log(artilleryBtn)
-  artilleryBtn.classList.add('flexCtr')
-  artilleryBtn.addEventListener("click",() => {
-    artilleryBtn.classList.add('.clicked')
-  })
-
-//PLAYER2 SELECTION BUTTONS
-  const pl2TankBtn = document.getElementById('pl2TankBtn')
-  pl2TankBtn.classList.add('flexCtr')
-  pl2TankBtn.addEventListener("click",() => {
-    pl2TankBtn.classList.add('.clicked')
-  })
-
-  const pl2SoldierBtn = document.getElementById('pl2SoldierBtn')
-  pl2SoldierBtn.classList.add('flexCtr')
-  pl2SoldierBtn.addEventListener("click",() => {
-    pl2SoldierBtn.classList.add('.clicked')
-  })
-
-  const pl2ArtilleryBtn = document.getElementById('pl2ArtilleryBtn')
-  pl2ArtilleryBtn.classList.add('flexCtr')
-  pl2ArtilleryBtn.addEventListener("click",() => {
-    pl2ArtilleryBtn.classList.add('.clicked')
-  })
-
-//Main menu script
-const gameMenu = document.getElementById('menuBtn');
+.title {
+    font-size: 3vw;
+    padding-left: 2vw;
+    font-family: 'CallOfOpsDuty', 'Times New Roman', Times, serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: beige;
+    text-shadow: 1px 1px 1px rgb(59, 81, 44);
+}
 
 
+ul li {
+    list-style: none;
+}
 
-//Inside the game screen
+ul li a {
+    font-size: 3vw;
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    border: 2px solid rgb(229, 242, 159);
+    background-color: rgb(125, 156, 87);
+    width: 30%;
+    position: relative;
+    left: 30%;
+    margin: 2%;
+}
 
-const best = document.getElementById('matchContainer');
-best.classList.add('flexCtr');
-best.style.color = ('red');
+ul li a:hover {
+    cursor: crosshair;
+    background-color: rgb(84, 128, 31);
+}
+
+ul li a:onclick {
+
+}
+
+.menuBox{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content:center;
+    align-items:center;
+    position: fixed;
+    /* font-size: 12%; */
+    top: 20%;
+    left: 20%;
+    right: 50%;
+    z-index: 1;
+    border: 2px solid black;
+    background-color: rgba(124, 118, 89, 0.863);
+    width: 50%;
+    padding: 5%;
+    margin-bottom: 1vw;
+}
+
+.copyright {
+    position: fixed;
+    font-size: 2vw;font-weight: bold;
+    top: 92%;
+    left: 42vw;
+    z-index: 1;
+}
+
+/* Game Styling */
+
+#gameBody {
+    background-color: rgba(124, 118, 89, 0.863);
+
+}
+
+.choiceBtn {
+    color: antiquewhite;
+    background-color: #4b6337;
+    padding: 10px;
+    border: 3px solid black;
+    z-index: 1;
+
+}
 
 
+#playerScoreContainer{
+    display:block;
+    justify-content:right;
+    align-items:stretch;
+    
+}
 
+#player1 {
+    position: absolute;
+    left: 20%;
+    padding-bottom: 10%;
+}
 
+#player2 {
+    position: absolute;
+    right: 22%;
+}
 
+#player1Choice {
+   position: absolute;
+   left: 20%;
+}
 
-// test the game
-// console.log(tsa("soldier");
+#tankBtn{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+#player2Choice {
+   position: absolute;
+   right: 22%;
+}
+
