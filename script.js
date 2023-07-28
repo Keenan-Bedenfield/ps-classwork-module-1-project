@@ -1,80 +1,76 @@
-function tsa(player1Choice) {
-    let optionArr = ["tank", "soldier", "artillery"];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body id="gameBody">
+    <main>
+        <div id="gameContainer">
+            <header id="matchContainer">
+                <h1 id="matchBest">Best out of:</h1>
+                <h2 id="matchCounter"></h2>
+            </header>
 
-    const player2Choice = choices[Math.floor(Math.random() * optionArr.length)];
-  
-    console.log("Player1 chooses:" + player1Choice);
-    console.log("Player2 chooses:" + player2Choice);
-  
+            <div id="playerScoreContainer">
+                <span id="player1" class="score">Player1 score:</span>
+                <span id="player2" class="score">Player2 score:</span>
+            </div>
+            <br>
+            <div>
+                <span id="player1Choice">Player1 Choice</span>
+                <span id="player2Choice">Player2 Choice</span>
+            </div>
 
-    if (player1Choice === player2Choice) {
-      console.log("Stalemate!");
-    } else if (
-      (player1Choice === "tank" && player2Choice === "artillery") ||
-      (player1Choice === "soldier" && player2Choice === "tank") ||
-      (player1Choice === "artillery" && player2Choice === "soldier")
-    ) {
-      console.log("Victory! You won the battle.");
-    } else {
-      console.log("Retreat! You've lost this battle.");
-    }
-  }
+            <div id="player1Selection">
+                <div class="gameBtn">
+                    <button id="tankBtn">Tank</button>
+                </div>
+                <div class="gameBtn">
+                    <button id="soldierBtn">Soldier</button>
+                </div>
+                <div class="gameBtn">
+                    <button id="artilleryBtn">Atilley</button>
+                </div>
+            </div>
 
-  //PLAYER SELECTION BUTTONS
-  const tankBtn = document.getElementById('tankBtn')
-  console.log(tankBtn);
-  tankBtn.classList.add('flexCtr')
-  tankBtn.innerHTML
-  tankBtn.addEventListener("click",() => {
+            <span id="centerImage"></span> 
 
-  })
+            <!-- <span> section for winner to pop up-->
+                <dialog open></dialog>
 
-  const soldierBtn = document.getElementById('soldierBtn')
-  soldierBtn.classList.add('flexCtr')
-  soldierBtn.addEventListener("click",() => {
+            <div id="player2Selection">
+                <div class="compGameBtn">
+                    <button id="pl2TankBtn">Tank</button>
+                </div>
+                <div class="compGameBtn">
+                    <button id="pl2SoldierBtn">Soldier</button>
+                </div>
+                <div class="compGameBtn">
+                    <button id="pl2ArtilleryBtn">Artillery</button>
+                </div>
+            </div>
 
-  })
+            <div>
+                <span id="restart">Restart</span>
+                <span id="quit">Quit <!--&times;--></span>
+            </div>
 
-  const artilleryBtn = document.getElementById('artilleryBtn')
-  artilleryBtn.classList.add('flexCtr')
-  artilleryBtn.addEventListener("click",() => {
+        </div>
 
-  })
+    </main>
 
-//PLAYER2 SELECTION BUTTONS
-  const pl2TankBtn = document.getElementById('pl2TankBtn')
-  pl2TankBtn.classList.add('flexCtr')
-  pl2TankBtn.addEventListener("click",() => {
+    <script src="script.js"></script>
+</body>
+</html>
 
-  })
+<!-- //winning choice populates onscreen
 
-  const pl2SoldierBtn = document.getElementById('pl2SoldierBtn')
-  pl2SoldierBtn.classList.add('flexCtr')
-  pl2SoldierBtn.addEventListener("click",() => {
+<ul id="choice">
+    <li>Tank</li>
+    <li>Soldier</li>
+    <li>Artillery</li>
 
-  })
-
-  const pl2ArtilleryBtn = document.getElementById('pl2ArtilleryBtn')
-  pl2ArtilleryBtn.classList.add('flexCtr')
-  pl2ArtilleryBtn.addEventListener("click",() => {
-
-  })
-
-//Main menu script
-const gameMenu = document.getElementById('.menuBtn');
-
-
-
-//Inside the game screen
-
-const best = document.getElementById('matchContainer');
-best.classList.add('flexCtr');
-best.style.color = ('red');
-
-
-
-
-
-
-// test the game
-// console.log(tsa("soldier");
+</ul> -->
