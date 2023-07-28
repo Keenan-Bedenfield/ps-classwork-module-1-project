@@ -1,6 +1,5 @@
-A simple rock paper scissors game with a Army theme
+A rock paper scissors game with a Army theme
 
-commits were made manually through the website
 
 **HOW TO PLAY**
 
