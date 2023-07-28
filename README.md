@@ -1,4 +1,4 @@
-A rock paper scissors game with a Army theme
+A rock paper scissors game with a Army theme made with HTML, CSS & Javascript.
 
 
 **HOW TO PLAY**
